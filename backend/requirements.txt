@@ -4,3 +4,4 @@ pymongo
 python-dotenv
 pillow
 python-multipart
+cloudinary

@@ -1,21 +1,15 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from pathlib import Path
 
 from backend.app.api.templates import router as template_router
 from backend.app.api.generate import router as generate_router
 
 app = FastAPI(title="Visiting Card API")
 
-# backend/
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Serve images
-app.mount(
-    "/storage",
-    StaticFiles(directory=BASE_DIR / "storage"),
-    name="storage",
-)
-
+# API routes
 app.include_router(template_router, prefix="/templates")
 app.include_router(generate_router, prefix="/generate")
+
+
+@app.get("/")
+def root():
+    return {"status": "Visiting Card API running"}
