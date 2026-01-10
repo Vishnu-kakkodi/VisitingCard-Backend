@@ -1,9 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from backend.app.core.database import templates_collection
-from backend.app.services.image_renderer import render_card
-
 from pathlib import Path
 import uuid
+
+from app.core.database import templates_collection
+from app.services.image_renderer import render_card
+
+router = APIRouter()
+
 
 router = APIRouter()
 

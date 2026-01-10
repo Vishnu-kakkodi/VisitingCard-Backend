@@ -3,8 +3,11 @@ import json
 import uuid
 from cloudinary.uploader import upload
 
-from backend.app.core.cloudinary import cloudinary
-from backend.app.db.mongo import templates_collection
+from app.core.database import templates_collection
+from app.core.cloudinary import cloudinary
+
+router = APIRouter()
+
 
 router = APIRouter()
 
