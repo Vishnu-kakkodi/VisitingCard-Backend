@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File, Form
-from app.core.database import templates_collection
+from backend.app.core.database import templates_collection
 from pathlib import Path
 import uuid
 import json

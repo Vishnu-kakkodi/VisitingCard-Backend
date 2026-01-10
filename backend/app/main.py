@@ -2,8 +2,9 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
-from app.api.templates import router as template_router
-from app.api.generate import router as generate_router
+from backend.app.api.templates import router as template_router
+from backend.app.api.generate import router as generate_router
+
 
 app = FastAPI(title="Visiting Card API")
 
