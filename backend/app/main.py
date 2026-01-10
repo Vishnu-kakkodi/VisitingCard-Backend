@@ -5,12 +5,12 @@ from pathlib import Path
 from backend.app.api.templates import router as template_router
 from backend.app.api.generate import router as generate_router
 
-
 app = FastAPI(title="Visiting Card API")
 
-BASE_DIR = Path(__file__).resolve().parent
+# backend/
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# 🔥 Serve images
+# Serve images
 app.mount(
     "/storage",
     StaticFiles(directory=BASE_DIR / "storage"),
